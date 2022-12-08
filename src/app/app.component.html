@@ -1,0 +1,19 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center py-5">Github Repo commit</h1>
+  </div>
+</div>
+
+<ol class="container list-group list-group-numbered">
+  <li
+    class="list-group-item d-flex justify-content-between align-items-start"
+    *ngFor="let item of commits.slice().reverse(); let i = index"
+  >
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Commit number {{ i }}</div>
+      <span>
+        message of commit : <strong>{{ item.commit.message }}</strong>
+      </span>
+    </div>
+  </li>
+</ol>
